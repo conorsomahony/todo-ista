@@ -15,6 +15,7 @@ import MyTodoItem from "./MyTodoItem";
 // Grommet components
 import List from 'grommet/components/List';
 import ListPlaceholder from 'grommet-addons/components/ListPlaceholder';
+import Animate from 'grommet/components/Animate';
 
 /**
  * My Todo List Component
@@ -28,10 +29,20 @@ class MyTodoList extends Component {
     if (Object.keys(this.props.listItems).length === 0) {
 
       // return placeholder for empty list
-      return (<ListPlaceholder
-        emptyMessage="You have nothing to do at the moment. Why don't you put your feet up?"
-        filteredTotal={0}
-        unfilteredTotal={0}/>)
+      return (
+        <Animate
+          enter={{
+          "animation": "slide-down",
+          "duration": 1000,
+          "delay": 0
+        }}
+          keep={true}>
+          <ListPlaceholder
+            emptyMessage="You have nothing to do at the moment. Why don't you put your feet up?"
+            filteredTotal={0}
+            unfilteredTotal={0}/>
+        </Animate>
+      )
     } else {
 
       // create actual list
