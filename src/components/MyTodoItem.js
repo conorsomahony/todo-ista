@@ -62,11 +62,12 @@ class MyTodoItem extends Component {
                             wrap={false}
                             responsive={false}>
                             {/* Todo Text and Priority Icon */}
+                            {getPriorityIcon(done, priority)}&nbsp;&nbsp;
                             <span
                                 className={done
                                 ? "doneItem"
-                                : ""}>{todoTitle}</span>
-                            &nbsp;&nbsp;{getPriorityIcon(done, priority)}
+                                : ""}>{todoTitle}
+                            </span>
                         </Box>
                         <Box>
                             {/* Delete Button */}

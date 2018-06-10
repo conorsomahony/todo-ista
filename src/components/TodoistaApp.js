@@ -18,6 +18,7 @@ import TodoistaAppFooter from "./TodoistaAppFooter";
 // Grommet Components
 import App from "grommet/components/App";
 import Box from "grommet/components/Box";
+import Article from "grommet/components/Article";
 import Title from "grommet/components/Title";
 import CheckBox from "grommet/components/CheckBox";
 
@@ -130,15 +131,14 @@ class TodoistaApp extends Component {
   render() {
     return (
       <App centered={false}>
-        <Box full={true}>
+        <Article full={true}>
           {/* App Header */}
           <TodoistaAppHeader deleteAll={this.deleteAll}/>
-
-          <Box pad="medium" margin="medium">
+          < Box pad="medium" margin="medium" size="xlarge" alignSelf="center">
             {/* Todo Form */}
             <MyTodoForm addListItem={this.addListItem}/>
           </Box>
-          <Box flex='grow'>
+          < Box flex='grow' size="xlarge" alignSelf="center">
             {/* Tooo List Container - flex='grow'  */}
             <Box
               direction="row"
@@ -167,7 +167,7 @@ class TodoistaApp extends Component {
           </Box>
           {/* Main App Footer */}
           <TodoistaAppFooter/>
-        </Box>
+        </Article>
       </App>
     );
   }
