@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://conorsomahony.net/sites/todo-ista/",
   "dependencies": {
-    "grommet": "^1.10.1",
+    "grommet": "^1.13.0",
     "grommet-addons": "^0.6.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-scripts": "1.1.4"
   },
   "scripts": {
